@@ -532,7 +532,6 @@ body.active { overflow: hidden; }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   padding-block: 145px 60px;
   text-align: center;
   position: relative;
