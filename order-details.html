@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie - Order Details</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/order-details.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="./index.html" class="logo">Foodie<span class="span">.</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <!-- Navbar is intentionally minimal - only logout button -->
+        </ul>
+      </nav>
+
+      <div class="header-btn-group">
+        <button class="btn btn-hover" id="logout-btn">Logout</button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+      
+      <!-- 
+        - #ORDER DETAILS
+      -->
+      
+      <section class="section order-details">
+        <div class="container">
+          <h2 class="h2 section-title">Order Details</h2>
+          
+          <div class="order-header">
+            <div class="order-info">
+              <p><strong>Order ID:</strong> #ORD-784512</p>
+              <p><strong>Date:</strong> November 18, 2025</p>
+              <p><strong>Status:</strong> <span class="status confirmed">Confirmed</span></p>
+            </div>
+            
+            <div class="order-totals">
+              <p><strong>Subtotal:</strong> $89.50</p>
+              <p><strong>Tax:</strong> $8.95</p>
+              <p><strong>Delivery Fee:</strong> $5.00</p>
+              <p class="total"><strong>Total:</strong> $103.45</p>
+            </div>
+          </div>
+          
+          <div class="order-items">
+            <h3 class="h3">Items in your order</h3>
+            
+            <div class="item-list">
+              <div class="item-card">
+                <img src="./assets/images/food-menu-1.png" alt="Fried Chicken Unlimited" class="item-image">
+                <div class="item-details">
+                  <h4 class="item-name">Fried Chicken Unlimited</h4>
+                  <p class="item-description">Crispy fried chicken with unlimited sides</p>
+                  <p class="item-price">$49.00</p>
+                </div>
+                <div class="item-quantity">
+                  <p>Quantity: 1</p>
+                </div>
+              </div>
+              
+              <div class="item-card">
+                <img src="./assets/images/food-menu-2.png" alt="Burger King Whopper" class="item-image">
+                <div class="item-details">
+                  <h4 class="item-name">Burger King Whopper</h4>
+                  <p class="item-description">Classic whopper with cheese and vegetables</p>
+                  <p class="item-price">$29.00</p>
+                </div>
+                <div class="item-quantity">
+                  <p>Quantity: 1</p>
+                </div>
+              </div>
+              
+              <div class="item-card">
+                <img src="./assets/images/food-menu-3.png" alt="White Castle Pizzas" class="item-image">
+                <div class="item-details">
+                  <h4 class="item-name">White Castle Pizzas</h4>
+                  <p class="item-description">Delicious pizza with extra cheese</p>
+                  <p class="item-price">$49.00</p>
+                </div>
+                <div class="item-quantity">
+                  <p>Quantity: 1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="order-actions">
+            <button class="btn btn-hover">Track Order</button>
+            <button class="btn btn-hover">Download Invoice</button>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/order-details.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

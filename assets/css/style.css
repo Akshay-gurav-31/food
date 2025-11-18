@@ -532,7 +532,6 @@ body.active { overflow: hidden; }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   padding-block: 145px 60px;
   text-align: center;
   position: relative;
@@ -1695,7 +1694,7 @@ textarea.input-field {
 
   .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1.6fr; }
 
-  .footer-form { margin-block-start: -170px; }
+  .footer-form { margin-block-start: -95px; }
 
 
 
@@ -1775,5 +1774,106 @@ textarea.input-field {
    */
 
   .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
+
+  /**
+   * MODALS
+   */
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: modalopen 0.4s;
+  }
+
+  @keyframes modalopen {
+    from {opacity: 0; transform: translateY(-60px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  .modal-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--rich-black-fogra-29);
+  }
+
+  .close {
+    color: var(--sonic-silver);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: var(--cinnabar);
+    text-decoration: none;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: var(--fw-500);
+    color: var(--rich-black-fogra-29);
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gainsboro);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus {
+    border-color: var(--deep-saffron);
+    outline: none;
+  }
+
+  .modal-footer-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .modal-footer-text a {
+    color: var(--deep-saffron);
+    text-decoration: none;
+    font-weight: var(--fw-500);
+  }
+
+  .modal-footer-text a:hover {
+    text-decoration: underline;
+  }
+
+  #login-btn,
+  #signup-btn {
+    margin-left: 10px;
+  }
 
 }

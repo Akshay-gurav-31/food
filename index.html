@@ -79,7 +79,8 @@
           <ion-icon name="search-outline"></ion-icon>
         </button>
 
-        <button class="btn btn-hover">Reservation</button>
+        <button class="btn btn-hover" id="login-btn">Login</button>
+        <button class="btn btn-hover" id="signup-btn">Sign Up</button>
 
         <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
           <span class="line top"></span>
@@ -1143,9 +1144,57 @@
     </article>
   </main>
 
+  <!-- 
+    - #LOGIN MODAL
+  -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <span class="close" id="close-login">&times;</span>
+      <h2>Login to Your Account</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" required>
+        </div>
+        <button type="submit" class="btn btn-hover">Login</button>
+        <p class="modal-footer-text">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
 
-
-
+  <!-- 
+    - #SIGNUP MODAL
+  -->
+  <div class="modal" id="signup-modal">
+    <div class="modal-content">
+      <span class="close" id="close-signup">&times;</span>
+      <h2>Create an Account</h2>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="signup-name">Full Name:</label>
+          <input type="text" id="signup-name" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email:</label>
+          <input type="email" id="signup-email" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password:</label>
+          <input type="password" id="signup-password" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-confirm-password">Confirm Password:</label>
+          <input type="password" id="signup-confirm-password" required>
+        </div>
+        <button type="submit" class="btn btn-hover">Sign Up</button>
+        <p class="modal-footer-text">Already have an account? <a href="#" id="show-login">Login</a></p>
+      </form>
+    </div>
+  </div>
 
   <!-- 
     - #FOOTER

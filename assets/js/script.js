@@ -86,3 +86,100 @@ window.addEventListener("scroll", function () {
   }
 
 });
+
+/**
+ * LOGIN/SIGNUP MODAL FUNCTIONALITY
+ */
+
+// Get modal elements
+const loginModal = document.getElementById('login-modal');
+const signupModal = document.getElementById('signup-modal');
+const loginBtn = document.getElementById('login-btn');
+const signupBtn = document.getElementById('signup-btn');
+const closeLogin = document.getElementById('close-login');
+const closeSignup = document.getElementById('close-signup');
+const showSignupLink = document.getElementById('show-signup');
+const showLoginLink = document.getElementById('show-login');
+
+// Open login modal
+loginBtn.addEventListener('click', function() {
+  loginModal.style.display = 'block';
+});
+
+// Open signup modal
+signupBtn.addEventListener('click', function() {
+  signupModal.style.display = 'block';
+});
+
+// Close login modal
+closeLogin.addEventListener('click', function() {
+  loginModal.style.display = 'none';
+});
+
+// Close signup modal
+closeSignup.addEventListener('click', function() {
+  signupModal.style.display = 'none';
+});
+
+// Switch to signup from login
+showSignupLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  loginModal.style.display = 'none';
+  signupModal.style.display = 'block';
+});
+
+// Switch to login from signup
+showLoginLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  signupModal.style.display = 'none';
+  loginModal.style.display = 'block';
+});
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(e) {
+  if (e.target === loginModal) {
+    loginModal.style.display = 'none';
+  }
+  if (e.target === signupModal) {
+    signupModal.style.display = 'none';
+  }
+});
+
+// Handle login form submission
+const loginForm = document.getElementById('login-form');
+loginForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = document.getElementById('login-email').value;
+  const password = document.getElementById('login-password').value;
+  
+  // Simple validation (in a real app, this would be server-side)
+  if (email && password) {
+    // Redirect to order details page after successful login
+    window.location.href = './order-details.html';
+  } else {
+    alert('Please fill in all fields');
+  }
+});
+
+// Handle signup form submission
+const signupForm = document.getElementById('signup-form');
+signupForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('signup-name').value;
+  const email = document.getElementById('signup-email').value;
+  const password = document.getElementById('signup-password').value;
+  const confirmPassword = document.getElementById('signup-confirm-password').value;
+  
+  // Simple validation (in a real app, this would be server-side)
+  if (name && email && password && confirmPassword) {
+    if (password === confirmPassword) {
+      alert('Account created successfully! Welcome, ' + name);
+      signupModal.style.display = 'none';
+      signupForm.reset();
+    } else {
+      alert('Passwords do not match!');
+    }
+  } else {
+    alert('Please fill in all fields');
+  }
+});

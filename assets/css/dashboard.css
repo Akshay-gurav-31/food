@@ -1,0 +1,70 @@
+/**
+ * DASHBOARD PAGE STYLES
+ */
+
+.dashboard {
+  padding: var(--section-padding) 0;
+}
+
+.dashboard .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.dashboard-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-1);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-2);
+}
+
+.dashboard-card .card-title {
+  margin-bottom: 20px;
+  color: var(--rich-black-fogra-29);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.dashboard-card .card-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--deep-saffron);
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  margin-bottom: 10px;
+  font-size: var(--fs-4);
+}
+
+.profile-info strong {
+  color: var(--rich-black-fogra-29);
+}
+
+#logout-btn {
+  margin-left: 10px;
+}
+
+/* Hide footer on dashboard page */
+footer {
+  display: none;
+}
